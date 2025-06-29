@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@keyframes pulseBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.apply-now-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid #f85a40;
+  color: transparent;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #f85a40, #f85a40);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+
+  /* ✅ Add both for compatibility */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  animation: bounceIn 0.6s ease-out, pulseBounce 2s infinite ease-in-out;
+  transition: background-size 0.4s ease;
+}
+
+.apply-now-button:hover {
+  background-size: 100% 100%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,0 +1,30 @@
+.footer {
+  background-color: #f8b400;
+  padding: 1rem 2rem;
+  color: rgb(29, 14, 241);
+  font-style:italic;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* makes it responsive on small screens */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-icons a {
+  margin-left: 1rem;
+  color: rgb(35, 11, 245);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-decoration: solid;
+}
+
+.social-icons a:hover {
+  color: #333; /* darker hover color */
+}
